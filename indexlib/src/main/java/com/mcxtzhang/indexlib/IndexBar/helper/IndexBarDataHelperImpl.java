@@ -104,7 +104,7 @@ public class IndexBarDataHelperImpl implements IIndexBarDataHelper {
                 } else if (rhs == null) {
                     return 1;
                 }
-                Log.i("hltag", "lhs: " + lhs.getBaseIndexPinyin() + "  rhs: " + rhs.getBaseIndexPinyin() + "    lhs: " + lhs.getBaseIndexTag() + "      rhs: " + rhs.getBaseIndexTag());
+//                Log.i("hltag", "lhs: " + lhs.getBaseIndexPinyin() + "  rhs: " + rhs.getBaseIndexPinyin() + "    lhs: " + lhs.getBaseIndexTag() + "      rhs: " + rhs.getBaseIndexTag());
                 if (lhs.getBaseIndexPinyin() == null && rhs.getBaseIndexPinyin() == null) {
                     return 0;
                 } else if (lhs.getBaseIndexPinyin() == null) {
