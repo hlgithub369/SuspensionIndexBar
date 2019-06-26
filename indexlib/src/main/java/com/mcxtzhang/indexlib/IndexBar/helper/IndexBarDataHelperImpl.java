@@ -1,5 +1,7 @@
 package com.mcxtzhang.indexlib.IndexBar.helper;
 
+import android.util.Log;
+
 import com.github.promeg.pinyinhelper.Pinyin;
 import com.mcxtzhang.indexlib.IndexBar.bean.BaseIndexPinyinBean;
 
@@ -102,7 +104,7 @@ public class IndexBarDataHelperImpl implements IIndexBarDataHelper {
                 } else if (rhs == null) {
                     return 1;
                 }
-
+                Log.i("hltag", "lhs: " + lhs.getBaseIndexPinyin() + "  rhs: " + rhs.getBaseIndexPinyin() + "    lhs: " + lhs.getBaseIndexTag() + "      rhs: " + rhs.getBaseIndexTag());
                 if (lhs.getBaseIndexPinyin() == null && rhs.getBaseIndexPinyin() == null) {
                     return 0;
                 } else if (lhs.getBaseIndexPinyin() == null) {
@@ -111,7 +113,7 @@ public class IndexBarDataHelperImpl implements IIndexBarDataHelper {
                     return 1;
                 }
 
-                if (lhs.getBaseIndexTag().equals("#") && rhs.getBaseIndexTag().equals("#")){
+                if (lhs.getBaseIndexTag().equals("#") && rhs.getBaseIndexTag().equals("#")) {
                     return 0;
                 } else if (lhs.getBaseIndexTag().equals("#")) {
                     return 1;
@@ -119,7 +121,7 @@ public class IndexBarDataHelperImpl implements IIndexBarDataHelper {
                     return -1;
                 }
 
-                if (!lhs.isNeedToPinyin() && !rhs.isNeedToPinyin()){
+                if (!lhs.isNeedToPinyin() && !rhs.isNeedToPinyin()) {
                     return 0;
                 } else if (!lhs.isNeedToPinyin()) {
                     return 1;
