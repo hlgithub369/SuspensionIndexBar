@@ -31,6 +31,7 @@ public abstract class BaseIndexBean implements ISuspensionInterface, Serializabl
 
     @Override
     public boolean isShowSuspension() {
+
         return true;
     }
 }
